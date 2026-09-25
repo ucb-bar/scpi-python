@@ -1,6 +1,5 @@
-import time
+from scpi.keysight import K81134A
 
-from cc.scpi.keysight import K81134A
 
 device = K81134A("128.32.62.102")
 device.connect()

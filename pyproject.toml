@@ -1,3 +1,20 @@
 [build-system]
-requires = ["setuptools>=42"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build>=0.12.10,<0.13"]
+build-backend = "uv_build"
+
+[project]
+name = "scpi-python"
+version = "2026.9.25"
+description = "SCPI Python library."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = []
+classifiers = []
+dependencies = [
+    "serializer-python @ git+https://github.com/ucb-bar/serializer-python.git"
+]
+
+[tool.uv.build-backend]
+module-name = "scpi"

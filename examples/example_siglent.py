@@ -1,6 +1,7 @@
 import time
 
-from cc.scpi.siglent import SPD3303X
+from scpi.siglent import SPD3303X
+
 
 device = SPD3303X("128.32.62.100")
 device.connect()
@@ -18,4 +19,3 @@ print(device.get_power(device.Channel.CH1))
 
 
 device.disable_output(device.Channel.CH1)
-
